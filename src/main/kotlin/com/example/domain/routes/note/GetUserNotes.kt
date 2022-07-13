@@ -12,7 +12,7 @@ fun Route.getUserNotes() {
 
     val notesDataSource by inject<NoteDataSource>()
 
-    get("notes/getByUser/{userCpf}") {
+    get("/notes/getByUser/{userCpf}") {
         val userCpf = call.parameters["userCpf"] ?: run {
             call.respond(HttpStatusCode.BadRequest, "CPF do usuário não informado!")
             return@get

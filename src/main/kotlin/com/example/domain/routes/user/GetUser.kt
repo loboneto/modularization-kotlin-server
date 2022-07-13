@@ -12,7 +12,7 @@ fun Route.getUser() {
 
     val userDataSource by inject<UserDataSource>()
 
-    get("users/{userCpf}") {
+    get("/users/{userCpf}") {
 
         val userCpf = call.parameters["userCpf"] ?: run {
             call.respond(HttpStatusCode.BadRequest, "CPF do usuário não informado!")

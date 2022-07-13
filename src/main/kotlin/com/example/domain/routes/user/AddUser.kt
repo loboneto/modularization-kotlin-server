@@ -13,7 +13,7 @@ fun Route.addUser() {
 
     val userDataSource by inject<UserDataSource>()
 
-    post("users") {
+    post("/users") {
 
         val userRequest = try {
             call.receive<UserRequest>()
