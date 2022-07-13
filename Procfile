@@ -1,0 +1,1 @@
+web: build/install/modularization-kotlin-server/bin/modularization-kotlin-server
