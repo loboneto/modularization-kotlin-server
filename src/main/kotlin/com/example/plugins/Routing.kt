@@ -1,5 +1,6 @@
 package com.example.plugins
 
+import com.example.domain.routes.note.getUserNotes
 import com.example.domain.routes.user.addUser
 import com.example.domain.routes.user.getUser
 import io.ktor.server.application.*
@@ -13,5 +14,6 @@ fun Application.configureRouting() {
         }
         getUser()
         addUser()
+        getUserNotes()
     }
 }
