@@ -1,4 +1,4 @@
-package com.example.routes.user
+package com.example.domain.routes.user
 
 import com.example.data.source.UserDataSource
 import com.example.util.mapToUserResponse
@@ -11,6 +11,7 @@ import org.koin.ktor.ext.inject
 fun Route.getUser() {
 
     val userDataSource by inject<UserDataSource>()
+
     get("users/{userCpf}") {
 
         val userCpf = call.parameters["userCpf"] ?: run {

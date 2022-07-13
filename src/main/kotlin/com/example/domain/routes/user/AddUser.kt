@@ -1,4 +1,4 @@
-package com.example.routes
+package com.example.domain.routes.user
 
 import com.example.data.model.request.UserRequest
 import com.example.data.source.UserDataSource
@@ -12,6 +12,7 @@ import org.koin.ktor.ext.inject
 fun Route.addUser() {
 
     val userDataSource by inject<UserDataSource>()
+
     post("users") {
 
         val userRequest = try {
